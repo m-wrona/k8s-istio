@@ -1,4 +1,4 @@
-# k8s-lstio
+# k8s-istio
 
 Service mesh exercises using Istio &amp; Kubernetes
 
