@@ -66,6 +66,12 @@ kubectl apply -f devops/bookinfo
 kubectl get gateway
 ```
 
+4) Check destination rules
+
+```bash
+kubectl get destinationrules
+```
+
 #### Sample app - removing
 
 ```bash
