@@ -88,5 +88,5 @@ export GATEWAY_URL=$INGRESS_HOST:$INGRESS_PORT
 and then
 
 ```bash
-curl -o /dev/null -s -w "%{http_code}\n" http://${INGRESS_HOST}/productpage
+curl -o /dev/null -s -w "%{http_code}\n" http://${GATEWAY_URL}/productpage
 ```
