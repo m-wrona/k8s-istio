@@ -96,3 +96,7 @@ and then
 ```bash
 curl -o /dev/null -s -w "%{http_code}\n" http://${GATEWAY_URL}/productpage
 ```
+
+# Documentation
+
+* [Istio](https://istio.io/docs/concepts/what-is-istio/)
