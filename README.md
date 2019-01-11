@@ -38,6 +38,14 @@ or
 kubectl delete -f devops/istio
 ```
 
+#### ISTIO - commands
+
+1) Checking stats
+
+```bash
+kubectl exec -it $POD  -c istio-proxy  -- sh -c 'curl localhost:15000/stats' | grep httpbin | grep pending
+```
+
 # Sample app
 
 Sample app is based on [ISTIO example](https://istio.io/docs/examples/bookinfo/).
