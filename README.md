@@ -105,6 +105,35 @@ and then
 curl -o /dev/null -s -w "%{http_code}\n" http://${GATEWAY_URL}/productpage
 ```
 
+# TLS
+
+#### Global TLS exervice
+
+1) Create namespaces with auto-injection
+
+```bash
+kubectl create namespace foo
+kubectl label namespace foo istio-injection=enabled
+kubectl create namespace bar
+kubectl label namespace bar istio-injection=enabled
+kubectl create namespace legacy
+```
+
+2) Check security rules
+
+```bash
+kubectl get policies.authentication.istio.io --all-namespaces
+kubectl get meshpolicies.authentication.istio.io
+kubectl get destinationrules.networking.istio.io --all-namespaces -o yaml | grep "host:"
+```
+
+Expected output:
+
+```bash
+    host: istio-policy.istio-system.svc.cluster.local
+    host: istio-telemetry.istio-system.svc.cluster.local
+```
+
 # Documentation
 
 * [Istio](https://istio.io/docs/concepts/what-is-istio/)
