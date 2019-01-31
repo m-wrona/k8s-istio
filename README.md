@@ -134,6 +134,12 @@ Expected output:
     host: istio-telemetry.istio-system.svc.cluster.local
 ```
 
+3) Checking certs
+
+```bash
+kubectl exec ${pod_id} -it -c istio-proxy -- ls /etc/certs
+```
+
 # Documentation
 
 * [Istio](https://istio.io/docs/concepts/what-is-istio/)
